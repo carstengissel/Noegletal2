@@ -1,0 +1,80 @@
+<rz-panel #panel0 [style]="{'display':'flex','height':'100px','width':'1900px'}" text="Bestand">
+    <div [ngStyle]="{'height':'26px','width':'1850px'}" class="row">
+        <div class="col-md-12" [ngStyle]="{'height':'24px'}">
+            <!--<rz-html #html0 [style]="{'height':'295px','width':'634px'}">-->
+
+
+            <div [ngStyle]="{'width':'1000px'}" i18n-class class="row">
+                <div i18n-class class="col-md-3">
+                    <rz-dropdown #dropdownVaelgReport [data]="userReports" i18n-placeholder placeholder="Vælg Rapport"
+                                 [style]="{'width':'100%'}" i18n-textProperty textProperty="reportName" i18n-valueProperty
+                                 valueProperty="reportId" i18n-name name="dropdownVaelgReport"
+                                 (change)="dropdownVaelgReportChange($event)">
+                    </rz-dropdown>
+                </div>
+                <div i18n-class class="col-md-2">
+                    <rz-button #buttonGem
+                               [style]="{'backgroundColor':'#46463c','height':'32px','marginRight':'5px','width':'150px'}"
+                               i18n-text text="Gem" (click)="buttonGemClick($event)">
+                    </rz-button>
+                </div>
+                <div i18n-class class="col-md-2">
+                    <rz-button #buttonSend
+                               [style]="{'backgroundColor':'#46463c','height':'32px','marginRight':'5px','width':'150px'}"
+                               i18n-text text="Send" (click)="buttonSendClick($event)">
+                    </rz-button>
+                </div>
+                <div i18n-class class="col-md-2">
+                    <rz-button #buttonSlet
+                               [style]="{'backgroundColor':'#46463c','height':'32px','marginRight':'5px','width':'150px'}"
+                               i18n-text text="Slet" (click)="buttonSletClick($event)">
+                    </rz-button>
+                </div>
+                <div i18n-class class="col-md-3">
+                    <rz-splitbutton #splitbuttonViewEdit [style]="{'height':'32px','width':'153px'}" i18n-text
+                                    text="Vis/Editer" (click)="SplitbuttonViewEditClick($event)">
+                        <rz-splitbutton-item i18n-text text="Editer" i18n-value value="EditMode">
+                        </rz-splitbutton-item>
+                        <rz-splitbutton-item i18n-text text="Vis" i18n-value value="ShowMode">
+                        </rz-splitbutton-item>
+                        <rz-splitbutton-item i18n-text text="Fullscreen" i18n-value value="Fuldscreen">
+                        </rz-splitbutton-item>
+                    </rz-splitbutton>
+                </div>
+            </div>
+
+            <div [ngStyle]="{'height':'10px'}" class="row">
+            </div>
+            <div [ngStyle]="{'backgroundColor':'rgb(89, 89, 80)','color':'rgb(89, 89, 80)','height':'2px','width':'1900px'}"
+                 class="row">
+            </div>
+            <div [ngStyle]="{'height':'10px'}" class="row">
+            </div>
+            <rz-button #button0 icon="arrow_back" buttonStyle="info" [hidden]="hideDetail"
+                       [style]="{'backgroundColor':'#5aa6ce','height':'32px','marginRight':'5px','width':'50px'}"
+                       (click)="btnBackClick($event)">
+            </rz-button>
+
+            <rz-button #button1 icon="arrow_forward" buttonStyle="info" [hidden]="!hideDetail"
+                       [style]="{'backgroundColor':'#5aa6ce','height':'32px','marginRight':'5px','width':'50px'}"
+                       (click)="btnBackClick($event)">
+            </rz-button>
+
+            <div *ngIf="showSpinner"  class="row">
+                <div class="col-md-12 justify-content-center align-items-center d-flex" [ngStyle]="{'height':'800px'}">
+                    <div class="loader"></div>
+                </div>
+            </div>
+
+            <div id="reportContainerTotal" [style.height.px]="Height" [style.width.px]="Width"
+                 (window:resize)="onResize($event)"></div>
+            <!--<div id="reportContainerTotal"  style="height:900px;width: 1800px;display: none"></div>-->
+
+            <div id="reportContainerDetail" [style.height.px]="Height" [style.width.px]="Width"
+                 (window:resize)="onResize($event)"></div>
+            <!--<div id="reportContainerDetail"  style="height:900px;width: 1800px;display: none"></div>-->
+
+            <!--</rz-html>-->
+        </div>
+    </div>
+</rz-panel>

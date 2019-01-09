@@ -1,0 +1,21 @@
+<rz-header #header0>
+  <div class="row justify-content-start align-items-center">
+    <div class="col-md-6 d-flex align-items-center">
+      <rz-sidebar-toggle #sidebarToggle0>
+      </rz-sidebar-toggle>
+      <rz-label #label0 text="Noegletal">
+      </rz-label>
+    </div>
+  </div>
+</rz-header>
+<rz-body #body0 [style]="{'paddingTop':'3px','width':''}">
+  <rz-content-container #main [style]="{'width':'797px'}" name="main">
+  </rz-content-container>
+</rz-body>
+<rz-sidebar #sidebar0 [stretch]="false" [style]="{'width':'221px'}">
+  <rz-panelmenu #panelmenu0 [style]="{'height':'100%','width':'220px'}">
+    <rz-panelmenu-item path="forside-cards" text="Forside">
+    </rz-panelmenu-item>
+  </rz-panelmenu>
+</rz-sidebar>
+<router-outlet></router-outlet>

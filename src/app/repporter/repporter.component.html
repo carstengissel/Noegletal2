@@ -1,0 +1,38 @@
+<rz-content #content1 container="main">
+  <rz-heading #pageTitle size="H1" text="Reports">
+  </rz-heading>
+  <div class="row">
+    <div class="col-md-12">
+      <rz-grid #grid0 [allowDelete]="true" [allowAdd]="true" [allowFiltering]="true" [allowMultiSorting]="false" [allowPaging]="true" [allowSorting]="true" emptyText="No records to display." addText="Add" (add)="grid0Add($event)" (rowSelect)="grid0RowSelect($event)">
+        <rz-grid-column property="RepID" title="Rep ID" type="integer">
+        </rz-grid-column>
+        <rz-grid-column property="RepSourceId" sortProperty="RepSource.RepServer" filterProperty="RepSource.RepServer" title="Rep Source" type="string">
+          <ng-template let-data gridColumnTemplate>
+          {{data?.RepSource?.RepServer}}
+          </ng-template>
+        </rz-grid-column>
+        <rz-grid-column property="Category" title="Category" type="string">
+        </rz-grid-column>
+        <rz-grid-column property="RepName" title="Rep Name" type="string">
+        </rz-grid-column>
+        <rz-grid-column property="RepCaption" title="Rep Caption" type="string">
+        </rz-grid-column>
+        <rz-grid-column property="RepText" title="Rep Text" type="string">
+        </rz-grid-column>
+        <rz-grid-column property="RepDef" title="Rep Def" type="string">
+        </rz-grid-column>
+        <rz-grid-column property="ReportDescription" title="Report Description" type="string">
+        </rz-grid-column>
+        <rz-grid-column property="RepOwner" title="Rep Owner" type="string">
+        </rz-grid-column>
+        <rz-grid-column property="RegInit" title="Reg Init" type="string">
+        </rz-grid-column>
+        <rz-grid-column format="date-time" property="RegTid" title="Reg Tid" type="string">
+          <ng-template let-data gridColumnTemplate>
+          {{data?.RegTid | utcDate}}
+          </ng-template>
+        </rz-grid-column>
+      </rz-grid>
+    </div>
+  </div>
+</rz-content>

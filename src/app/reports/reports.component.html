@@ -1,0 +1,17 @@
+<rz-content #content1 container="main">
+  <rz-heading #pageTitle size="H1" text="Reports">
+  </rz-heading>
+  <div class="row">
+    <div class="col-md-12">
+      <rz-grid #grid0 [allowDelete]="false" [allowAdd]="false" [allowFiltering]="true" [allowMultiSorting]="false" [allowPaging]="true" [allowSorting]="true" emptyText="No records to display." addText="Add">
+        <rz-grid-column format="date-time" property="RegTid" title="Reg Tid" type="string">
+          <ng-template let-data gridColumnTemplate>
+          {{data?.RegTid | utcDate}}
+          </ng-template>
+        </rz-grid-column>
+        <rz-grid-column property="RegInit" title="Reg Init" type="string">
+        </rz-grid-column>
+      </rz-grid>
+    </div>
+  </div>
+</rz-content>

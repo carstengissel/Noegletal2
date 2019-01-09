@@ -1,0 +1,98 @@
+<rz-content #content1 container="main">
+    <div [ngStyle]="{'width':'100%'}" class="row">
+        <div class="col-md-12">
+            <rz-tabs #tabs0 [style]="{'width':''}" (change)="tabs0Change($event)">
+                <rz-tabs-item [selected]="true" text="Rapporter">
+                    <rz-label #label0 [style]="{'fontSize':'21px','fontWeight':'400'}" [text]="model">
+                    </rz-label>
+                    <div class="row justify-content-center" [ngStyle]="{'backgroundColor':'89, 89, 80)','color':'#3a474d','height':'2px','paddingBottom':'4px'}">
+                    </div>
+                    <rz-datalist #datalist0 [allowPaging]="false" [count]="getNoegleTalReportsCount" [data]="getNoegleTalReportsResult" emptyText="No records found." [pageSize]="10">
+                        <ng-template let-data datalistTemplate>
+                            <rz-html #html2>
+                                <strong>
+                                    <rz-link  path="report-ssrs/{{data?.reportId}}" text={{data?.shortDescription}}></rz-link>
+                                    <br>
+                                    <header>
+                                        <h6>{{data?.longDescription}}</h6>
+                                    </header>
+                                </strong>
+                            </rz-html>
+                        </ng-template>
+                    </rz-datalist>
+                </rz-tabs-item>
+                <rz-tabs-item [selected]="false" text="Beskrivelse">
+                    <rz-html #html0>
+                        <div>
+                            <p>
+                                <span style="font-size: 10pt;"><span style="font-family: verdana;"><b><span lang="DA">Vejledning om FOAs og&nbsp;FOAs A-kasses</span>&nbsp;statistik om medlemsbestanden </b></span></span><br />
+                                <span style="font-size: 10pt;"><span style="font-family: verdana;"><span lang="DA">Denne statistik&nbsp;indeholder oplysninger om antallet af medlemmer af enten FOA - Fag og Arbejde eller FOAs a-kasse. </span></span></span></p>
+                        </div>
+                        <p>
+                            <span style="font-size: 10pt;"><span style="font-family: verdana;"><b><span lang="DA">Indholdsbeskrivelse</span></b></span></span><br />
+                            <span style="font-size: 10pt;"><span style="font-family: verdana;"><span lang="DA">Personbegreber:<br />
+            	-Antal</span> medlemmer<br />
+            	-Antal medlemmer omregnet til fuldtidsbetalende</span></span><br />
+                            <span style="font-size: 10pt;"><span style="font-family: verdana;"><span lang="DA">-Gennemsnitsalder</span></span></span><br />
+                            &nbsp;</p>
+                        <p>
+                            <span style="font-size: 10pt;"><span style="font-family: verdana;"><span lang="DA">Personbegreberne opg&oslash;res fordelt efter bl.a. k&oslash;n, alder, afdeling, stillingsgruppe, medlemstype. </span></span></span></p>
+                        <p>
+            	<span style="font-size: 10pt;"><span style="font-family: verdana;"><span lang="DA"><b>Statistiske begreber</b><br />
+            	Statistikken d&aelig;kker kun personer, der p&aring; opg&oslash;relsestidspunktet var medlem af enten FOA eller FOAs A-kasse. Dette betyder, at personer, der er sletteberettigede, men endnu ikke slettet, stadig optr&aelig;der som medlemmer i statistikken.<br />
+            	<br />
+            	<u>Antal medlemmer af FOA:</u><br />
+            	Antallet af personer, der p&aring; opg&oslash;relsestidspunktet er medlem af FOA og/eller medlem af FOAs A-kasse. </span></span></span></p>
+                        <p>
+            	<span style="font-size: 10pt;"><span style="font-family: verdana;"><span lang="DA"><u>Antal medlemmer af FOAs A-kasse:</u><br />
+            	Antallet af personer, der p&aring; opg&oslash;relsestidspunktet er medlem af FOAs A-kasse og/eller medlem af FOA. </span></span></span></p>
+                        <p>
+            	<span style="font-size: 10pt;"><span style="font-family: verdana;"><span lang="DA"><b>Opg&oslash;relse</b><br />
+            	Statistikken opg&oslash;res udfra</span> FOA og FOAs A-kasses medlemsregister FIKS og f&oslash;lger de m&aring;nedlige kontingentopkr&aelig;vninger. Tallene tr&aelig;kkes efter den sidste slettek&oslash;rsel i den efterf&oslash;lgende m&aring;ned. Dette betyder, at medlemsstatistikken for fx 31. december m&aring;ned er trukket i midten af januar.</span></span></p>
+                        <p>
+                            <span style="font-size: 10pt;"><span style="font-family: verdana;"><span lang="DA">Opg&oslash;relsen af antallet af medlemmer p&aring; en given dato</span> med et andet <strong>udtr&aelig;kstidspunkt</strong> ville resultere i et andet medlemstal.</span></span></p>
+                        <p>
+                            <span style="font-size: 10pt;"><span style="font-family: verdana;"><span lang="DA">Afdelingerne laver l&oslash;bende sm&aring; medlems&aelig;ndringer tilbage i tid. Man kan v&aelig;lge at lade sine udtr&aelig;k v&aelig;re dynamiske, hvorved man f&aring;r medtaget &aelig;ndringer tilbage i tid. I arbejdet med medlemsstatistik anbefaler vi dog, at man bruger de s&aring;kaldte statiske tal, s&aring; &aelig;ndringer tilbage i tid ikke medtages.&nbsp;Dynamiske udtr&aelig;k kan som regel ikke genskabes - tallene kan v&aelig;re &aelig;ndret f&aring; sekunder efter man har trukket det. </span></span></span></p>
+                        <p>
+                            <span style="font-size: 10pt;"><span style="font-family: verdana;"><span lang="DA">Statistikken g&aring;r tilbage til november 1999 og opdateres hver m&aring;ned. </span></span></span></p>
+                        <p>
+            	<span style="font-size: 10pt;"><span style="font-family: verdana;"><span lang="DA"><b>Sammenlignelighed med anden statistik</b><br />
+            	Antallet af personer opg&oslash;res ofte i statistikker&nbsp;den f&oslash;rste i m&aring;neden (1. januar osv.). Dette forhold skal man v&aelig;re opm&aelig;rksom p&aring; ved sammenligninger. FOAs N&oslash;gletal opg&oslash;r bestand den sidste dag i hver m&aring;ned.</span></span></span></p>
+                        <p>
+            	<span style="font-size: 10pt;"><span style="font-family: verdana;"><b><span lang="DA">Grundmateriale</span></b><br />
+            	<span lang="DA">I FOA og FOAs A-kasses</span> medlemsstatistik indg&aring;r oplysningerne:<br />
+            	- Afdeling</span></span><br />
+                            <span style="font-size: 10pt;"><span style="font-family: verdana;"><span lang="DA">- Alder </span></span></span><br />
+                            <span style="font-size: 10pt;"><span style="font-family: verdana;"><span lang="DA">- Antal medlemmer </span></span></span><br />
+                            <span style="font-size: 10pt;"><span style="font-family: verdana;"><span lang="DA">- Bop&aelig;l </span></span></span><br />
+                            <span style="font-size: 10pt;"><span style="font-family: verdana;"><span lang="DA">- Gennemsnitsalder </span></span></span><br />
+                            <span style="font-size: 10pt;"><span style="font-family: verdana;"><span lang="DA">- K&oslash;n </span></span></span><br />
+                            <span style="font-size: 10pt;"><span style="font-family: verdana;"><span lang="DA">- Medlem af FOA </span></span></span><br />
+                            <span style="font-size: 10pt;"><span style="font-family: verdana;"><span lang="DA">- Medlem af FOAs A-kasse </span></span></span><br />
+                            <span style="font-size: 10pt;"><span style="font-family: verdana;"><span lang="DA">- Medlemstype (de flg. hovedgrupper: Erhvervsaktive inkl. elever,&nbsp;pensionister, efterl&oslash;nsmodtagere)</span></span></span><span style="font-size: 10pt;"><span style="font-family: verdana;"><span lang="DA">&nbsp;</span></span></span><br />
+                            <span style="font-size: 10pt;"><span style="font-family: verdana;"><span lang="DA">- Sektor/faggruppe</span>/stilling</span></span><br />
+                            <span style="font-size: 10pt;"><span style="font-family: verdana;"><span lang="DA">- Tid </span></span></span><br />
+                            <span style="font-size: 10pt;"><span style="font-family: verdana;"><span lang="DA">- Tillidshverv<br />
+            	- Uddannelse<br />
+            	- Arbejdssted<br />
+            	- Uddannelsessted<br />
+            	- Leder ja/nej</span></span></span></p>
+                        <p>
+                            <span style="font-size: 10pt;"><span style="font-family: verdana;"><span lang="DA">Fra og med 31. januar 2013 indeholder medlemstypen &quot;elever&quot; alene elever p&aring; FOAs omr&aring;de. Afgr&aelig;nsningen af elever bestemmes af, hvilken uddannelseskode medlemmet har. Er uddannelseskoden <strong>forskellig fra </strong>0, 1, 2, 5, 11, 20 og 23, er medlemmet elev p&aring; FOAs omr&aring;de.</span></span></span></p>
+                    </rz-html>
+                </rz-tabs-item>
+                <rz-tabs-item [selected]="false" text="Forespørgsel">
+                    <div class="row justify-content-center" [ngStyle]="{'height':'900px','width':'1800px'}">
+                        <div class="col-md-12 justify-content-center" [ngStyle]="{}">
+                            <rz-html #html1>
+                                <div *ngIf="valgt==2">
+                                    <app-powerbi-report [model]="model"></app-powerbi-report>
+                                </div>
+                            </rz-html>
+                        </div>
+                    </div>
+                </rz-tabs-item>
+            </rz-tabs>
+        </div>
+    </div>
+</rz-content>

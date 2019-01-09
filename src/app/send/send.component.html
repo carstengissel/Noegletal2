@@ -1,0 +1,24 @@
+<rz-content #content1 container="main">
+  <rz-panel #panel0 [style]="{'height':'630px','width':'332px'}">
+    <rz-label #label0 [style]="{'marginRight':'20px','width':'269.390625px'}" text="Vælg Report:">
+    </rz-label>
+    <rz-autocomplete #autocompleteVaelgReport [style]="{'marginRight':'34px','width':'274px'}" name="autocompleteVaelgReport">
+    </rz-autocomplete>
+    <rz-label #label1 [style]="{'width':'173.3125px'}" text="Vælg Sagsbehandler:">
+    </rz-label>
+    <rz-listbox #listboxVaelgSagsbehandler [style]="{'height':'170px','width':'276px'}" name="listboxVaelgSagsbehandler">
+    </rz-listbox>
+    <rz-button #button1 icon="arrow_downward" [style]="{'backgroundColor':'#0c8e34','height':'40px','marginBottom':'5px','marginLeft':'33px','marginRight':'53px','marginTop':'10px','width':'80px'}">
+    </rz-button>
+    <rz-button #button2 icon="arrow_upward" [style]="{'backgroundColor':'#e72316','height':'40px','marginLeft':'3px','width':'80px'}">
+    </rz-button>
+    <rz-label #label2 text="Valgte Sagsbehandlere:">
+    </rz-label>
+    <rz-textarea #textarea0 [style]="{'height':'170px','width':'272px'}" name="textarea0">
+    </rz-textarea>
+    <rz-button #buttonSend [style]="{'backgroundColor':'#362e2c','marginRight':'8px','width':'132px'}" text="Send">
+    </rz-button>
+    <rz-button #button0 [style]="{'backgroundColor':'#362e2c','width':'132px'}" text="Luk">
+    </rz-button>
+  </rz-panel>
+</rz-content>

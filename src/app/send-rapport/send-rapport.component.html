@@ -1,0 +1,45 @@
+<rz-content #content1 container="main">
+  <div [ngStyle]="{'height':'239px'}" class="row">
+    <div class="col-md-12">
+      <div class="row align-items-start" [ngStyle]="{'paddingTop':'0px'}">
+        <div class="col-md-4">
+          <rz-label #label0 text="Vælg Rapport:">
+          </rz-label>
+        </div>
+        <div class="col-md-4">
+          <rz-label #label1 text="Send Rapport Navn:">
+          </rz-label>
+        </div>
+        <div class="col-md-4">
+        </div>
+      </div>
+      <div class="row align-items-start justify-content-start">
+        <div class="col-md-4">
+          <rz-dropdown #ddlUserReports [data]="getUserReportsResult" [style]="{'display':'inline-block','float':'none'}" textProperty="reportName" valueProperty="reportName" name="ddlUserReports" (change)="ddlUserReportsChange($event)">
+          </rz-dropdown>
+        </div>
+        <div class="col-md-4 justify-content-center">
+          <rz-textbox #textboxSendRapportNavn [style]="{'width':'231px'}" [(ngModel)]="selectedReport && selectedReport.reportName" name="textboxSendRapportNavn">
+          </rz-textbox>
+        </div>
+        <div class="col-md-4">
+        </div>
+      </div>
+      <div class="row align-items-start justify-content-start" [ngStyle]="{'paddingTop':'12px'}">
+      </div>
+      <rz-picklist #picklistSagsbehandler [showSourceControls]="false" [showTargetControls]="false" [source]="getSagsBehandlereResult" sourceHeader="Vælg Sagsbehandlere:" [style]="{'display':'flex','float':'none','height':'200px'}" targetHeader="Valgte Sagsbehandlere:">
+        <ng-template let-data picklistTemplate>
+        {{data.init}}
+        </ng-template>
+      </rz-picklist>
+      <div class="row justify-content-between" [ngStyle]="{'marginTop':'10px'}">
+        <div class="col-md-8" [ngStyle]="{'float':'left','textAlign':'left'}">
+          <rz-button #button0 [style]="{'backgroundColor':'#383332','marginRight':'5px','marginTop':'20','width':'130px'}" text="Send" (click)="button0Click($event)">
+          </rz-button>
+          <rz-button #button1 [style]="{'backgroundColor':'#383332','position':'static','width':'130px'}" text="Luk" (click)="button1Click($event)">
+          </rz-button>
+        </div>
+      </div>
+    </div>
+  </div>
+</rz-content>

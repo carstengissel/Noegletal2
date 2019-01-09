@@ -1,0 +1,190 @@
+<rz-content #content1 container="main">
+  <div [ngStyle]="{'marginBottom':'10px'}" class="row">
+    <div class="col-md-3">
+      <rz-card #card0 [style]="{'height':'100%','width':'100%'}">
+        <div class="row">
+          <div class="col-md-12" [ngStyle]="{}">
+            <rz-html #html0>
+              <div id="bestand" class="pbi-line">
+                         <div class="sampleImg" id="bestandImg"></div>
+                      <div class="sampleTextButton">
+                          <div class="pageTitle">
+                              <h3>Medlemsbestand</h3>
+                              <h6>Her findes rapporter over det samlede antal af medlemmer fordelt efter køn, alder, afdeling, faggruppe, tillidshverv etc. samt mulighed for at lave udtræk over antallet af medlemmer.
+              </h6>
+                          </div>
+                        
+                      </div>
+                  </div>
+            </rz-html>
+            <rz-button #button2 text="Vælg" (click)="button2Click($event)">
+            </rz-button>
+          </div>
+        </div>
+      </rz-card>
+    </div>
+    <div class="col-md-3">
+      <rz-card #card1 [style]="{'height':'100%','width':'100%'}">
+        <div [ngStyle]="{}" class="row">
+          <div class="col-md-12 justify-content-start" [ngStyle]="{'height':''}">
+            <rz-html #html1>
+              <div id="bevaeg" class="pbi-line">
+                         <div class="sampleImg" id="bevaegImg"></div>
+                      <div class="sampleTextButton">
+                          <div class="pageTitle">
+                              <h3>Medlemsbevægelser</h3>
+                              <h6>Her findes rapporter over antallet af ind- og udmeldte medlemmer fordelt efter køn, alder, afdeling, faggruppe, ind- og udmeldelsesårsag etc. samt mulighed for at lave udtræk over ind- og udmeldte medlemmer.
+              </h6>
+                          </div>
+                        
+                      </div>
+                  </div>
+            </rz-html>
+            <rz-button #button1 text="Vælg" (click)="button1Click($event)">
+            </rz-button>
+          </div>
+        </div>
+      </rz-card>
+    </div>
+    <div class="col-md-3">
+      <rz-card #card2>
+        <div class="row">
+          <div class="col-md-12">
+            <rz-html #html2>
+              <div id="ledighed" class="pbi-line">
+                         <div class="sampleImg" id="ledigImg"></div>
+                      <div class="sampleTextButton">
+                          <div class="pageTitle">
+                              <h3>Stillingsfordelt ledighed</h3>
+                              <h6>Her findes rapporter over det samlede antal af medlemmer på dagpenge fordelt efter køn, alder, region, faggruppe og ledighedsårsag samt mulighed for at lave udtræk over antallet af medlemmer på dagpenge.
+              </h6>
+                          </div>
+                        
+                      </div>
+                  </div>
+            </rz-html>
+            <rz-button #button3 text="Vælg" (click)="button3Click($event)">
+            </rz-button>
+          </div>
+        </div>
+      </rz-card>
+    </div>
+    <div class="col-md-3">
+      <rz-card #card5 [style]="{'height':'100%','width':'100%'}">
+        <div class="row">
+          <div class="col-md-12" [ngStyle]="{}">
+            <rz-html #html5>
+              <div id="bestand" class="pbi-line">
+                         <div class="sampleImg" id="fleksImg"></div>
+                      <div class="sampleTextButton">
+                          <div class="pageTitle">
+                              <h3>Fleksjob</h3>
+                              <h6>Her findes rapporter over medlemmer i fleksjobordninger, samt mulighed for at lave udtræk
+              </h6>
+                          </div>
+                        
+                      </div>
+                  </div>
+            </rz-html>
+            <rz-button #button4 text="Vælg" (click)="button4Click($event)">
+            </rz-button>
+          </div>
+        </div>
+      </rz-card>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+      <rz-card #card8 [style]="{'height':'100%','width':'100%'}">
+        <div class="row">
+          <div class="col-md-12" [ngStyle]="{}">
+            <rz-html #html8>
+              <div id="bestand" class="pbi-line">
+                         <div class="sampleImg" id="fleksImg"></div>
+                      <div class="sampleTextButton">
+                          <div class="pageTitle">
+                              <h3>Til- og afgange efterløn</h3>
+                              <h6>Her findes rapporter over medlemmer i fleksjobordninger, samt mulighed for at lave udtræk
+              </h6>
+                          </div>
+                        
+                      </div>
+                  </div>
+            </rz-html>
+            <rz-button #button8 text="Vælg" (click)="button8Click($event)">
+            </rz-button>
+          </div>
+        </div>
+      </rz-card>
+    </div>
+    <div class="col-md-3">
+      <rz-card #card9 [style]="{'height':'100%','width':'100%'}">
+        <div class="row">
+          <div class="col-md-12" [ngStyle]="{}">
+            <rz-html #html9>
+              <div id="bestand" class="pbi-line">
+                         <div class="sampleImg" id="okonomiImg"></div>
+                      <div class="sampleTextButton">
+                          <div class="pageTitle">
+                              <h3>Økonomi</h3>
+                              <h6>Her findes rapporter over medlemmer i fleksjobordninger, samt mulighed for at lave udtræk
+              </h6>
+                          </div>
+                        
+                      </div>
+                  </div>
+            </rz-html>
+            <rz-button #button9 text="Vælg" (click)="button9Click($event)">
+            </rz-button>
+          </div>
+        </div>
+      </rz-card>
+    </div>
+    <div class="col-md-3">
+      <rz-card #card10 [style]="{'height':'100%','width':'100%'}">
+        <div class="row">
+          <div class="col-md-12" [ngStyle]="{}">
+            <rz-html #html10>
+              <div id="bestand" class="pbi-line">
+                         <div class="sampleImg" id="foedselJubilaerImg"></div>
+                      <div class="sampleTextButton">
+                          <div class="pageTitle">
+                              <h3>Jubilæer og fødselsdage</h3>
+                              <h6>Her findes rapporter over medlemmer i fleksjobordninger, samt mulighed for at lave udtræk
+              </h6>
+                          </div>
+                        
+                      </div>
+                  </div>
+            </rz-html>
+            <rz-button #button10 text="Vælg" (click)="button10Click($event)">
+            </rz-button>
+          </div>
+        </div>
+      </rz-card>
+    </div>
+    <div class="col-md-3">
+      <rz-card #card11 [style]="{'height':'100%','width':'100%'}">
+        <div class="row">
+          <div class="col-md-12" [ngStyle]="{}">
+            <rz-html #html11>
+              <div id="bestand" class="pbi-line">
+                         <div class="sampleImg" id="reportBuilderImg"></div>
+                      <div class="sampleTextButton">
+                          <div class="pageTitle">
+                              <h3>TZ Login</h3>
+                              <h6>Her findes rapporter over medlemmer i fleksjobordninger, samt mulighed for at lave udtræk
+              </h6>
+                          </div>
+                        
+                      </div>
+                  </div>
+            </rz-html>
+            <rz-button #button11 text="Vælg" (click)="button11Click($event)">
+            </rz-button>
+          </div>
+        </div>
+      </rz-card>
+    </div>
+  </div>
+</rz-content>

@@ -1,0 +1,14 @@
+<rz-content #content1 container="main">
+  <rz-heading #pageTitle size="H1">
+  </rz-heading>
+  <rz-panel #panel0 [style]="{'height':'150px','width':'399px'}">
+    <rz-label #labelGemNavn [style]="{'width':'50px'}" text="Navn:">
+    </rz-label>
+    <rz-textbox #textboxGemReport [style]="{'width':'236px'}" [(ngModel)]="ReportNewName" name="textboxGemReport" (change)="textboxGemReportChange($event)">
+    </rz-textbox>
+    <rz-button #buttonGem [style]="{'backgroundColor':'#46463c','marginLeft':'52px','marginRight':'5px','marginTop':'30px','width':'110px'}" text="Gem" (click)="buttonGemClick($event)">
+    </rz-button>
+    <rz-button #button0 [style]="{'backgroundColor':'#46463c','width':'110px'}" text="Fortryd" (click)="button0Click($event)">
+    </rz-button>
+  </rz-panel>
+</rz-content>

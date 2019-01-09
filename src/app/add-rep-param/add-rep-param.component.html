@@ -1,0 +1,18 @@
+<rz-content #content1 container="main">
+  <div class="row">
+    <div class="col-md-12">
+      <rz-form #form0 (cancel)="form0Cancel($event)">
+        <rz-lookuppopup-form-field property="RepId" [required]="true" textProperty="Category" title="Report" valueProperty="RepID" placeholder="Choose Report" [pageSize]="getReportsPageSize" requiredText="is required" type="lookuppopup">
+        </rz-lookuppopup-form-field>
+        <rz-integer-form-field property="ParamId" [required]="true" title="Param Id" requiredText="is required" minText="cannot be less than" maxText="cannot be more than" type="integer">
+        </rz-integer-form-field>
+        <rz-string-form-field property="ParamSelect" [required]="false" title="Param Select" [maxLength]="1" requiredText="is required" type="string">
+        </rz-string-form-field>
+        <rz-string-form-field property="RegInit" [required]="true" title="Reg Init" [maxLength]="12" requiredText="is required" type="string">
+        </rz-string-form-field>
+        <rz-date-form-field property="RegTid" [required]="true" title="Reg Tid" requiredText="is required" type="date">
+        </rz-date-form-field>
+      </rz-form>
+    </div>
+  </div>
+</rz-content>

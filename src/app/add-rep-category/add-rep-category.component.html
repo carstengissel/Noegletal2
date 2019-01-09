@@ -1,0 +1,20 @@
+<rz-content #content1 container="main">
+  <div class="row">
+    <div class="col-md-12">
+      <rz-form #form0 (cancel)="form0Cancel($event)">
+        <rz-integer-form-field property="RepCategoryId" [required]="true" title="Rep Category Id" requiredText="is required" minText="cannot be less than" maxText="cannot be more than" type="integer">
+        </rz-integer-form-field>
+        <rz-lookuppopup-form-field property="RepSourceId" [required]="true" textProperty="RepServer" title="Rep Source" valueProperty="RepSourceId" placeholder="Choose RepSource" [pageSize]="getRepSourcesPageSize" requiredText="is required" type="lookuppopup">
+        </rz-lookuppopup-form-field>
+        <rz-string-form-field property="RepCategoryheader" [required]="true" title="Rep Categoryheader" [maxLength]="100" requiredText="is required" type="string">
+        </rz-string-form-field>
+        <rz-string-form-field property="RepCategorySubHeader" [required]="true" title="Rep Category Sub Header" [maxLength]="300" requiredText="is required" type="string">
+        </rz-string-form-field>
+        <rz-string-form-field property="RegInit" [required]="true" title="Reg Init" [maxLength]="12" requiredText="is required" type="string">
+        </rz-string-form-field>
+        <rz-date-form-field property="RegTid" [required]="true" title="Reg Tid" requiredText="is required" type="date">
+        </rz-date-form-field>
+      </rz-form>
+    </div>
+  </div>
+</rz-content>

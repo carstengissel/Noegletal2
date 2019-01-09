@@ -1,0 +1,46 @@
+<rz-content #content1 container="main">
+  <div [ngStyle]="{}" class="row">
+    <div class="col-md-9">
+      <rz-label #closeLabel [style]="{'fontWeight':'bold'}" text="Item no longer available." *ngIf="!canEdit">
+      </rz-label>
+    </div>
+    <div class="col-md-3">
+      <rz-button #closeButton buttonStyle="secondary" [style]="{'marginBottom':'20px'}" text="Close" *ngIf="!canEdit" (click)="closeButtonClick($event)">
+      </rz-button>
+    </div>
+  </div>
+  <div [ngStyle]="{}" class="row">
+    <div class="col-md-9">
+      <rz-label #label0 [style]="{'fontWeight':'bold'}" text="Another user has made conflicting changes to one or more of the fields you have modified. Please reload." *ngIf="hasChanges">
+      </rz-label>
+    </div>
+    <div class="col-md-3">
+      <rz-button #button0 buttonStyle="secondary" icon="autorenew" [style]="{'marginBottom':'20px'}" text="Reload" *ngIf="hasChanges" (click)="button0Click($event)">
+      </rz-button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <rz-form #form0 *ngIf="canEdit" (cancel)="form0Cancel($event)">
+        <rz-integer-form-field property="RepCategoryItemId" [required]="true" title="Rep Category Item Id" requiredText="is required" minText="cannot be less than" maxText="cannot be more than" type="integer">
+        </rz-integer-form-field>
+        <rz-lookuppopup-form-field property="RepCategoryId" [required]="true" textProperty="RepCategoryheader" title="Rep Category" valueProperty="RepCategoryId" placeholder="Choose RepCategory" [pageSize]="getRepCategoriesPageSize" requiredText="is required" type="lookuppopup">
+        </rz-lookuppopup-form-field>
+        <rz-string-form-field property="RepCategoryItemHeader" [required]="true" title="Rep Category Item Header" [maxLength]="100" requiredText="is required" type="string">
+        </rz-string-form-field>
+        <rz-string-form-field property="RepCategoryItemSubHeader" [required]="true" title="Rep Category Item Sub Header" [maxLength]="300" requiredText="is required" type="string">
+        </rz-string-form-field>
+        <rz-string-form-field property="RepCategoryItemBod" [required]="true" title="Rep Category Item Bod" [maxLength]="1000" requiredText="is required" type="string">
+        </rz-string-form-field>
+        <rz-string-form-field property="RepCategoryItemResponsible" [required]="true" title="Rep Category Item Responsible" [maxLength]="50" requiredText="is required" type="string">
+        </rz-string-form-field>
+        <rz-date-form-field property="KrselsDato" [required]="true" title="Korsels Dato" requiredText="is required" type="date">
+        </rz-date-form-field>
+        <rz-string-form-field property="RegInit" [required]="true" title="Reg Init" [maxLength]="12" requiredText="is required" type="string">
+        </rz-string-form-field>
+        <rz-date-form-field property="RegTid" [required]="true" title="Reg Tid" requiredText="is required" type="date">
+        </rz-date-form-field>
+      </rz-form>
+    </div>
+  </div>
+</rz-content>
